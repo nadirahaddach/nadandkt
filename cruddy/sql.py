@@ -1,6 +1,5 @@
 from __init__ import db
 from cruddy.model import Users
-# import random
 
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
