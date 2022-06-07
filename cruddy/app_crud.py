@@ -66,7 +66,7 @@ def crud_authorize():
 @app_crud.route('/logout/', methods=["GET", "POST"])
 def crud_logout():
     logout_user()
-    return render_template("main_page.html")
+    return render_template("home.html")
 
 
 # CRUD create/add
