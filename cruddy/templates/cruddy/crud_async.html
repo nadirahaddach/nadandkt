@@ -220,19 +220,7 @@
 
 <!-- CONTENT (in <body>), content for this page -->
 {% block content %}
-    <style>
-        body {
-            text-align:center;
-            color: #ffffff;
-            background: linear-gradient(135deg, #ffffff, #DE978A , #ffffff, #DE978A, #000000);
-            background-size: 800% 800%;
-            animation: gradient 30s ease infinite;
-        }
-        a {
-            color: white
-        }
-    </style>
-    <div class="container py-4 text-light bg-dark">
+    <div class="container py-4 text-light bg-danger">
         <header class="pb-3 mb-4 border-bottom">
             <div class="d-flex align-items-center text-light text-decoration-none">
                 <span class="fs-4">Asynchronous CRUD Database Operations</span>
@@ -240,10 +228,10 @@
         </header>
 
         <div class="container py-4">
-            <div class="p-5 mb-4 bg-danger text-dark rounded-3">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
                 <h2>Backpack Pro Database Viewer</h2>
                 <div class="row align-items-md-stretch">
-                    <table class="table">
+                    <table class="table text-dark rounded-3">
                         <tbody>
                         <tr>
                             <td></td>
@@ -290,7 +278,7 @@
             </div>
         </div>
         <div class="container py-4">
-            <div class="p-5 mb-4 bg-danger text-dark rounded-3">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
                 <h2>Create a new record</h2>
 
                 <table class="table">
@@ -317,9 +305,9 @@
             </div>
         </div>
         <div class="container py-4">
-            <div class="row mb-4 bg-danger text-dark rounded-3">
+            <div class="row mb-4 bg-light text-dark rounded-3">
                 <div class="col-md-3">
-                    <div class="p-5 mb-4 bg-danger text-dark rounded-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Read</h2>
                         <!-- <input type="submit" value="Read" -->
                         <table id="read_table">
@@ -343,7 +331,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-5 mb-4 bg-danger text-dark rounded-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Update</h2>
                         <table id="update_table">
                             <tr>
@@ -369,7 +357,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="p-5 mb-4 bg-danger text-dark rounded-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
                         <h2>Delete</h2>
                         <table id="read_table">
                             <tr><th><label for="delete_userid">ID</label></th></tr>
