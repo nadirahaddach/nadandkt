@@ -5,14 +5,14 @@
 {% block content %}
 
 <div class="container py-4">
-    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+    <header class="pb-3 mb-4 border-bottom border-danger text-dark">
         <span class="fs-4">SQL CRUD Sign Up Page</span>
     </header>
 </div>
 
 <div class="container py-4 text-light bg-danger">
 
-    <div class="container bg-secondary py-4">
+    <div class="container bg-light py-4">
         <div class="p-5 mb-4 bg-light text-dark rounded-3">
             <form method="POST" ID="authUser" action={{url_for('crud.crud_authorize')}} >
                 <table>
