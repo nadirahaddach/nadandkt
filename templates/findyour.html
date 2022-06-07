@@ -15,17 +15,17 @@
         }
 
         .container1 {
-            background-color: #222222;
+            background-color: #FFDAE0;
             box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
             padding: 15px;
             width: 40%;
             text-align: center;
-            font-family: Andale Mono;
+            font-family: Baskerville;
             float: left;
         }
 
         .container2 {
-            background-color: #222222;
+            background-color: #FFDAE0;
             box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
             padding: 15px;
             width: 40%;
@@ -53,39 +53,47 @@
     <body class="center">
     <br>
     <br>
+    <br>
 
-    <h1 style="font-size: xxx-large; text-align: center; font-family: Andale Mono"> Find Your Counselor</h1>
+    <h1 style="font-size: xxx-large; text-align: center; font-family: Baskerville"> Find Your Counselor</h1>
 
     <br>
     <br>
 
     <div class="container1" style="margin-left: 20px; width: 650px">
-        <h2>Find Your counselor!</h2>
+        <h2>Find Your Counselor!</h2>
+        <br>
         <h5>Type your last name to find your counselor!</h5>
+        <br>
         <form method="POST" action="/learning/findyour/">
             <input type="text" id="lname" name="lname">
             <input type="submit" value="Submit" onclick="compare({{ input }})">
         </form>
         <br>
+        <br>
         <h4>Your counselor is: </h4><h3 id="counselor"></h3>
     </div>
 
     <div class="container2" style="margin-right: 80px; width: 650px">
-        <p style="font-family: Andale Mono; font-size: x-large; text-align: center">How Does the Code Work?</p>
-        <a href="https://github.com/nadirahaddach/TheSlayers.github.io/blob/main/templates/findyour.html" class="button1" style="font-family: 'Andale Mono'; font-size: larger; text-align: center">Github Findyour.html File</a>
+        <p style="font-family: Baskerville; font-size: x-large; text-align: center">How Does the Code Work?</p>
+        <a href="https://github.com/nadirahaddach/TheSlayers.github.io/blob/main/templates/findyour.html" class="button1" style="font-family: Baskerville; font-size: larger; text-align: center">Github Findyour.html File</a>
         <br>
         <br>
         <i>Head:</i> The first section you see is the head tag. This tag includes whatever you don't want in the body of your html file.
         For this page, we put the styling of the two boxes you see on the screen within the head tag. The black color, width and height of the box, and the font choices are all included within this tag.
         <br>
         <br>
-        <i>Body:</i>
+        <i>Body:</i> The second section in the HTML file is the Body, this is where the majority of the code goes
+        including what you want to see on the page. This text you are reading is in the body tag! The body tag includes the div tags, javascript,
+        and has tables to organize the frontend code.
         <br>
         <br>
-        <i>Script:</i>
+        <i>Script:</i> The script tag, which means javascript, is where the technical code is. All function of the Find Your Counselor page is made using javascript.
+        When the user types in their last name, it is javascript that figures out witch counselor to display and displays it.
         <br>
         <br>
-        <i>Blocks:</i>
+        <i>Blocks:</i> At the top of the page we extend the "layouts/base.html" to make our website cohesive and thematic, in order to do this, we utilize blocks.
+        This page uses a block body block and an endblock block to allow the page to have its own body features that are separate from the "layouts/base.html".
 
     </div>
 
