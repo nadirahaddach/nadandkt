@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<style>
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -15,17 +15,17 @@
         }
 
         .container1 {
-            background-color: #dcd0ff;
+            background-color: #222222;
             box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
             padding: 15px;
             width: 40%;
             text-align: center;
-            font-family: Baskerville;
+            font-family: Andale Mono;
             float: left;
         }
 
         .container2 {
-            background-color: #dcd0ff;
+            background-color: #222222;
             box-shadow: 50px 50px 50px rgba(255, 255, 255, 0.2);
             padding: 15px;
             width: 40%;
@@ -47,53 +47,47 @@
             word-wrap: break-word;
         }
 
-        .btn {
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 8px 12px;
-            background-color: #DE978A;
-        }
 
-        .btn-large {
-            display: block;
-            width: 100%;
-        }
+    </style>
 
-        .setting {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 15px 0;
-        }
-        .button {
-            position: relative;
-            margin-left: 83%;
-            font-family: Baskerville;
-
-        }
-</style>
-
-<body class="center">
-<br>
-<br>
-
-{% extends "layouts/base.html" %}
-
-{% block body %}
     <body class="center">
     <br>
     <br>
-    <h2>Find Your Counselor!</h2>
-    <h5>Type your last name to find your counselor!</h5>
 
-    <form method="POST" action="/councelorsearch/">
-        <input type="text" id="lname" name="lname">
-        <input type="submit" value="Submit" onclick="compare({{ input }})">
-    </form>
+    <h1 style="font-size: xxx-large; text-align: center; font-family: Andale Mono"> Find Your Counselor</h1>
+
     <br>
-    <h4>Your counselor is: </h4><h3 id="counselor"></h3>
+    <br>
+
+    <div class="container1" style="margin-left: 20px; width: 650px">
+        <h2>Find Your counselor!</h2>
+        <h5>Type your last name to find your counselor!</h5>
+        <form method="POST" action="/learning/findyour/">
+            <input type="text" id="lname" name="lname">
+            <input type="submit" value="Submit" onclick="compare({{ input }})">
+        </form>
+        <br>
+        <h4>Your counselor is: </h4><h3 id="counselor"></h3>
+    </div>
+
+    <div class="container2" style="margin-right: 80px; width: 650px">
+        <p style="font-family: Andale Mono; font-size: x-large; text-align: center">How Does the Code Work?</p>
+        <a href="https://github.com/nadirahaddach/TheSlayers.github.io/blob/main/templates/findyour.html" class="button1" style="font-family: 'Andale Mono'; font-size: larger; text-align: center">Github Findyour.html File</a>
+        <br>
+        <br>
+        <i>Head:</i> The first section you see is the head tag. This tag includes whatever you don't want in the body of your html file.
+        For this page, we put the styling of the two boxes you see on the screen within the head tag. The black color, width and height of the box, and the font choices are all included within this tag.
+        <br>
+        <br>
+        <i>Body:</i>
+        <br>
+        <br>
+        <i>Script:</i>
+        <br>
+        <br>
+        <i>Blocks:</i>
+
+    </div>
 
     <script>
         const input = '{{ input }}';
@@ -118,8 +112,9 @@
         }
 
         <!-- uses decimal conversion of each letter one at a time to find where in the alphabet the last name is -->
-
-        if ((char1 < 68) || (char1 <= 68 && char2 < 69) || (char1 <= 68 && char2 <= 69 && char3 <= 76)) {
+        if ((char1 < 65)) {
+            document.getElementById('counselor').innerHTML = "N/A";
+        } else if ((char1 < 68) || (char1 <= 68 && char2 < 69) || (char1 <= 68 && char2 <= 69 && char3 <= 76)) {
             document.getElementById('counselor').innerHTML = "Mrs. Susie Kihneman";
         } else if (char1 <= 74) {
             document.getElementById('counselor').innerHTML = "Mr. Tim Roty";
@@ -127,20 +122,14 @@
             document.getElementById('counselor').innerHTML = "Ms. Lauren Kennedy";
         } else if ((char1 < 83) || (char1 <= 83 && char2 < 72) || (char1 <= 83 && char2 <= 72 && char3 <= 65)) {
             document.getElementById('counselor').innerHTML = "Mr. Jesse Luna";
-        } else {
+        } else if ((char1 < 90) || (char1 <= 90 && char2 < 90) || (char1 <= 90 && char2 <= 90 && char3 <= 90)) {
             document.getElementById('counselor').innerHTML = "Mrs. Kathy Marron";
+        } else {
+            document.getElementById('counselor').innerHTML = "";
         }
     </script>
 
-    <style>
-        body,html,
-        body {
-            color: whitesmoke;
-        }
-        .center {
-            text-align: center;
-        }
-    </style>
     </body>
+
 
 {% endblock %}
